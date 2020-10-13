@@ -16,4 +16,13 @@ const MoviesList = ({ movies }) => {
   );
 };
 
+const MoviesPage = ({ match, movies }) => (
+  <div>
+    <MoviesList movies={movies} />
+    // We also add a `Route` component that will render `MovieShow`
+    // when a movie is selected
+    <Route path={`${match.url}/:movieId`} component={MovieShow}/>
+  </div>
+)
+
 export default MoviesPage
