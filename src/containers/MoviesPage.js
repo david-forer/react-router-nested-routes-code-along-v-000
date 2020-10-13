@@ -2,6 +2,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import MoviesList from '../components/MoviesList';
+import MovieShow from '../components/MovieShow';
 
 const MoviesList = ({ movies }) => {
   const renderMovies = Object.keys(movies).map(movieID =>
